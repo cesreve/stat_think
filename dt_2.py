@@ -119,4 +119,5 @@ _ = plt.xlabel("n_defaults")
 _ = plt.ylabel("PMF")
 
 # Show the plot
+
 plt.show()
