@@ -20,14 +20,14 @@ np.random.seed(42)
 x = np.random.random(size = 1000)
 y = 2*x -1.2*x**2 + 1 + np.random.normal(0.7,0.05, size = 1000)
 #
-#_ = plt.plot(x, y, linestyle='none', marker = '.')
-#plt.show()
+_ = plt.plot(x, y, linestyle='none', marker = '.')
+plt.show()
 
 # =============================================================================
 # Linear regression
 # =============================================================================
 
-# Plot the illiteracy rate versus fertility
+# Plot the x rate versus y
 _ = plt.plot(x, y, marker='.', linestyle='none')
 _ = plt.xlabel("Xs'")
 _ = plt.ylabel("Ys'")
@@ -84,10 +84,10 @@ plt.show()
 # Plotting bootstraped regression lines
 # =============================================================================
 
-for i in range(100):
+for i in range(1000):
     x_th = np.array([0, 1])
     y_th = a_s[i] * x_th + b_s[i]
-    _ = plt.plot(x_th, y_th, linewidth=0.5, alpha=0.2, color = 'red')
+    _ = plt.plot(x_th, y_th, linewidth=0.1, alpha=0.2, color = 'red')
 _ = plt.plot(x, y, marker='.', linestyle='none')
 
 plt.show()
